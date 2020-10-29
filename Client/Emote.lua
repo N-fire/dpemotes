@@ -423,3 +423,28 @@ function OnEmotePlay(EmoteName)
   end
   return true
 end
+
+RegisterNetEvent('dpemote:playEmote')
+AddEventHandler('dpemote:playEmote', function(emote)
+    local name = emote
+    if name == "c" then
+        if IsInAnimation then
+            EmoteCancel()
+        else
+            EmoteChatMessage(Config.Languages[lang]['nocancel'])
+        end
+      return
+    elseif name == "help" then
+      EmotesOnCommand()
+    return end
+
+    if DP.Emotes[name] ~= nil then
+      if OnEmotePlay(DP.Emotes[name]) then end return
+    elseif DP.Dances[name] ~= nil then
+      if OnEmotePlay(DP.Dances[name]) then end return
+    elseif DP.PropEmotes[name] ~= nil then
+      if OnEmotePlay(DP.PropEmotes[name]) then end return
+    else
+      EmoteChatMessage("'"..name.."' "..Config.Languages[lang]['notvalidemote'].."")
+    end
+end)
