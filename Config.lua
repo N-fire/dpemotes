@@ -2,7 +2,7 @@ Config = {
 -- Change the language of the menu here!.
 -- Note fr and de are google translated, if you would like to help out with translation / just fix it for your server check below and change translations yourself
 -- try en, fr, de or sv.
-	MenuLanguage = 'en',	
+	MenuLanguage = 'fr',	
 -- Set this to true to enable some extra prints
 	DebugDisplay = false,
 -- Set this to false if you have something else on X, and then just use /e c to cancel emotes.
@@ -26,7 +26,7 @@ Config = {
 	MenuPosition = "right", -- (left, right)
 -- You can disable the Ragdoll keybinding here.
 	RagdollEnabled = true,
-	RagdollKeybind = 303, -- Get the button number here https://docs.fivem.net/game-references/controls/
+	RagdollKeybind = 83, -- Get the button number here https://docs.fivem.net/game-references/controls/
 -- You can disable the Facial Expressions menu here.
 	ExpressionsEnabled = true,
 -- You can disable the Walking Styles menu here.
